@@ -39,7 +39,7 @@ public class X509SubjectAlternativeNameConstants {
 		}
 	}	
 		
-	public enum SubjectAlternativeNameGeneralNames {
+	public enum X509SubjectAlternativeNameGeneralNames {
 		
 		otherName, // byte arrays containing the ASN.1 DER encoded form 
 		rfc822Name, // String

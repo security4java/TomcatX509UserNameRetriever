@@ -184,31 +184,31 @@ public class X509SubjectAlternativeNameRetriever extends X509SubjectDnRetriever 
 		if (alternativeNameConfiguration != null) {
 			this.alternativeNameConfiguration = alternativeNameConfiguration;
 			String alternativeNameConfigurationLowerCase = alternativeNameConfiguration.toLowerCase();
-			if ((X509SubjectAlternativeNameConstants.SubjectAlternativeNameGeneralNames.otherName.equalsIgnoreCase (alternativeNameConfiguration)) 
+			if ((X509SubjectAlternativeNameConstants.X509SubjectAlternativeNameGeneralNames.otherName.equalsIgnoreCase (alternativeNameConfiguration)) 
 					|| (X509SubjectAlternativeNameConstants.OtherNameOptions.contains(alternativeNameConfigurationLowerCase))) {
-				alternativeNameTypeValue = X509SubjectAlternativeNameConstants.SubjectAlternativeNameGeneralNames.otherName.ordinal();				
-			} else if ((X509SubjectAlternativeNameConstants.SubjectAlternativeNameGeneralNames.rfc822Name.equalsIgnoreCase (alternativeNameConfiguration)) 
+				alternativeNameTypeValue = X509SubjectAlternativeNameConstants.X509SubjectAlternativeNameGeneralNames.otherName.ordinal();				
+			} else if ((X509SubjectAlternativeNameConstants.X509SubjectAlternativeNameGeneralNames.rfc822Name.equalsIgnoreCase (alternativeNameConfiguration)) 
 					|| (X509SubjectAlternativeNameConstants.RFC822NameOptions.contains(alternativeNameConfigurationLowerCase))) {
-				alternativeNameTypeValue = X509SubjectAlternativeNameConstants.SubjectAlternativeNameGeneralNames.rfc822Name.ordinal();				
-			} else if ((X509SubjectAlternativeNameConstants.SubjectAlternativeNameGeneralNames.dNSName.equalsIgnoreCase (alternativeNameConfiguration)) 
+				alternativeNameTypeValue = X509SubjectAlternativeNameConstants.X509SubjectAlternativeNameGeneralNames.rfc822Name.ordinal();				
+			} else if ((X509SubjectAlternativeNameConstants.X509SubjectAlternativeNameGeneralNames.dNSName.equalsIgnoreCase (alternativeNameConfiguration)) 
 					|| (X509SubjectAlternativeNameConstants.DNSNameOptions.contains(alternativeNameConfigurationLowerCase))) {
-				alternativeNameTypeValue = X509SubjectAlternativeNameConstants.SubjectAlternativeNameGeneralNames.dNSName.ordinal();				
-			} else if (X509SubjectAlternativeNameConstants.SubjectAlternativeNameGeneralNames.x400Address.equalsIgnoreCase (alternativeNameConfiguration)) {
-				alternativeNameTypeValue = X509SubjectAlternativeNameConstants.SubjectAlternativeNameGeneralNames.x400Address.ordinal();				
-			} else if ((X509SubjectAlternativeNameConstants.SubjectAlternativeNameGeneralNames.directoryName.equalsIgnoreCase (alternativeNameConfiguration)) 
+				alternativeNameTypeValue = X509SubjectAlternativeNameConstants.X509SubjectAlternativeNameGeneralNames.dNSName.ordinal();				
+			} else if (X509SubjectAlternativeNameConstants.X509SubjectAlternativeNameGeneralNames.x400Address.equalsIgnoreCase (alternativeNameConfiguration)) {
+				alternativeNameTypeValue = X509SubjectAlternativeNameConstants.X509SubjectAlternativeNameGeneralNames.x400Address.ordinal();				
+			} else if ((X509SubjectAlternativeNameConstants.X509SubjectAlternativeNameGeneralNames.directoryName.equalsIgnoreCase (alternativeNameConfiguration)) 
 					|| (X509SubjectAlternativeNameConstants.DirectoryNameOptions.contains(alternativeNameConfigurationLowerCase))) {
-				alternativeNameTypeValue = X509SubjectAlternativeNameConstants.SubjectAlternativeNameGeneralNames.directoryName.ordinal();				
-			} else if (X509SubjectAlternativeNameConstants.SubjectAlternativeNameGeneralNames.ediPartyName.equalsIgnoreCase (alternativeNameConfiguration)) {
-				alternativeNameTypeValue = X509SubjectAlternativeNameConstants.SubjectAlternativeNameGeneralNames.ediPartyName.ordinal();				
-			} else if ((X509SubjectAlternativeNameConstants.SubjectAlternativeNameGeneralNames.uniformResourceIdentifier.equalsIgnoreCase (alternativeNameConfiguration)) 
+				alternativeNameTypeValue = X509SubjectAlternativeNameConstants.X509SubjectAlternativeNameGeneralNames.directoryName.ordinal();				
+			} else if (X509SubjectAlternativeNameConstants.X509SubjectAlternativeNameGeneralNames.ediPartyName.equalsIgnoreCase (alternativeNameConfiguration)) {
+				alternativeNameTypeValue = X509SubjectAlternativeNameConstants.X509SubjectAlternativeNameGeneralNames.ediPartyName.ordinal();				
+			} else if ((X509SubjectAlternativeNameConstants.X509SubjectAlternativeNameGeneralNames.uniformResourceIdentifier.equalsIgnoreCase (alternativeNameConfiguration)) 
 					|| (X509SubjectAlternativeNameConstants.UriOptions.contains(alternativeNameConfigurationLowerCase))) {				
-				alternativeNameTypeValue = X509SubjectAlternativeNameConstants.SubjectAlternativeNameGeneralNames.uniformResourceIdentifier.ordinal();				
-			} else if ((X509SubjectAlternativeNameConstants.SubjectAlternativeNameGeneralNames.iPAddress.equalsIgnoreCase (alternativeNameConfiguration)) 
+				alternativeNameTypeValue = X509SubjectAlternativeNameConstants.X509SubjectAlternativeNameGeneralNames.uniformResourceIdentifier.ordinal();				
+			} else if ((X509SubjectAlternativeNameConstants.X509SubjectAlternativeNameGeneralNames.iPAddress.equalsIgnoreCase (alternativeNameConfiguration)) 
 					|| (X509SubjectAlternativeNameConstants.IPAddressOptions.contains(alternativeNameConfigurationLowerCase))) {					
-				alternativeNameTypeValue = X509SubjectAlternativeNameConstants.SubjectAlternativeNameGeneralNames.iPAddress.ordinal();				
-			} else if ((X509SubjectAlternativeNameConstants.SubjectAlternativeNameGeneralNames.registeredID.equalsIgnoreCase (alternativeNameConfiguration)) 
+				alternativeNameTypeValue = X509SubjectAlternativeNameConstants.X509SubjectAlternativeNameGeneralNames.iPAddress.ordinal();				
+			} else if ((X509SubjectAlternativeNameConstants.X509SubjectAlternativeNameGeneralNames.registeredID.equalsIgnoreCase (alternativeNameConfiguration)) 
 				|| (X509SubjectAlternativeNameConstants.RegisteredIDOptions.contains(alternativeNameConfigurationLowerCase))) {									
-				alternativeNameTypeValue = X509SubjectAlternativeNameConstants.SubjectAlternativeNameGeneralNames.registeredID.ordinal();				
+				alternativeNameTypeValue = X509SubjectAlternativeNameConstants.X509SubjectAlternativeNameGeneralNames.registeredID.ordinal();				
 			} else {
 				try {
 					alternativeNameTypeValue = (new Integer(alternativeNameConfiguration)).intValue();
